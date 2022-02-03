@@ -6,12 +6,9 @@ export class CsvFileReader {
   constructor(public filename: string) {}
 
   read(): void {
-    const mathes = fs.readFileSync(this.filename, { encoding: 'utf-8' });
-
-    const dataMathes = mathes
+    this.data = fs
+      .readFileSync(this.filename, { encoding: 'utf-8' })
       .split('\n')
       .map((row: string): string[] => row.split(','));
-
-    this.data = dataMathes;
   }
 }
