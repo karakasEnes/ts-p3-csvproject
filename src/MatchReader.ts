@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { MatchResults } from './MatchResult';
 import { stringDateToDate } from './utils';
-type MatchData = [Date, string, string, number, number, MatchResults, string];
+import { MatchData } from './MatchData';
 
 interface DataReader {
   read(): void;
